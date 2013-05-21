@@ -35,7 +35,7 @@ when 'package'
   package node['nginx']['package_name']
   service 'nginx' do
     supports :status => true, :restart => true, :reload => true
-    #action :enable
+    action :nothing
   end
   include_recipe 'nginx::commons'
 end
